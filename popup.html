@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Getting Started Extension's Popup</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body class="popup">
+        <form>
+            <label>
+                Title
+            </label>
+            <input id="title" type="text" />
+
+            <label>
+                Link
+            </label>
+            <input id="url" type="text" />
+
+            <input id="board" type="hidden" />
+            <input id="list" type="hidden" />
+
+            <p>
+                This link will be added to the list <em id="listtext"></em> on the <em id="boardtext"></em>. <a href="#" id="options">Change this?</a>
+            </p>
+
+            <button id="submit" tabindex="1">Send to Trello</button>
+        </form>
+        <script src="jquery-2.0.2.min.js"></script>
+        <script src="client.js"></script>
+        <script src="popup.js"></script>
+    </body>
+</html>
+
