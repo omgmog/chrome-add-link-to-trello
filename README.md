@@ -3,7 +3,7 @@ chrome-add-link-to-trello
 
 This is a Chrome extension that will let you add the currently viewed page as a link on Trello
 
-![](http://uk.omg.li/PnUY/Screen%20Shot%202013-06-23%20at%2002.41.12.png)
+![](http://cl.ly/PnUY/Screen%20Shot%202013-06-23%20at%2002.41.12.png)
 
 ### To install:
 
