@@ -3,7 +3,7 @@
 
     "name": "Add a link to trello",
     "description": "This extension will let you add a link to a list on a board on Trello.",
-    "version": "1.0",
+    "version": "1.2",
     "options_page": "options.html",
 
     "permissions": [
