@@ -11,7 +11,13 @@
                 <label for="apikey">
                     API Key (You can generate one <a href="https://trello.com/1/appKey/generate" target="_blank">here</a>)
                 </label>
-                <input id="apikey" type="text" />
+                <input id="apikey" type="text" length=32/>
+            </li>
+            <li>
+                <label for="apikey">
+                    Authorization Token
+                </label>
+                <input id="trello_token" type="text" length=64 />
             </li>
             <li class="needsapi">
                 <label for="boards">
@@ -37,10 +43,10 @@
     <div id="status"></div>
     <div class="footer">
         <p>
-            This extension was created by <a href="http://omgmog.net" target="_blank">Max Glenister</a> for <a href="http://refreshoxford.co.uk" target="_blank">Refresh Oxford</a> on June 22nd 2013.
+            This extension was created by <a href="https://omgmog.net" target="_blank">Max Glenister</a>.
         </p>
         <p>
-            You can view the full source on <a href="http://github.com/omgmog/chrome-add-link-to-trello" target="_blank">GitHub</a>, and I'm sure you can improve it.
+            You can view the full source on <a href="https://github.com/omgmog/chrome-add-link-to-trello" target="_blank">GitHub</a>, and I'm sure you can improve it.
         </p>
     </div>
     <script src="jquery-2.0.2.min.js"></script>

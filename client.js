@@ -1,4 +1,4 @@
-var scripturl = 'https://api.trello.com/1/client.js?key='+localStorage.apikey;
+var scripturl = `https://api.trello.com/1/client.js?key=${localStorage.apikey}`;
 $.getScript(scripturl, function(){
     var event = new Event('Trelloready');
     document.dispatchEvent(event);
@@ -12,7 +12,7 @@ var options = {
         options.persist = true;
         options.interactive = true;
         options.expiration = "never";
-        options.success = this.authorized;
+        options.success = true;
         options.scope = { write: true, read: true };
 
         return options;

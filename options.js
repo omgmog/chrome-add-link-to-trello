@@ -25,13 +25,14 @@ function save_options() {
     var status = $('#status');
 
     var apikey = $('#apikey').val();
-    if (apikey.length == 32) {
-        localStorage.apikey = $('#apikey').val();
-        status.text("Options Saved.");
-    }else{
-        status.text("Invalid API Key");
+    var trello_token = $('#trello_token').val();
+    
+    if (apikey.length == 32 && trello_token.length == 64) {
+        localStorage.apikey = apikey;
+        localStorage.trello_token = trello_token;
     }
-    if(localStorage.apikey && Trello.authorized()){
+
+    if(localStorage.apikey && localStorage.trello_token && Trello.authorized()){
         localStorage.board = $boards.children(':selected').attr('id');
         localStorage.list = $lists.children(':selected').attr('id');
     }
@@ -45,10 +46,12 @@ function restore_options() {
         return false;
     }
     var stored_apikey = localStorage.apikey;
+    var stored_token = localStorage.trello_token;
     var stored_board = localStorage.board;
     var stored_list = localStorage.list;
 
     $('#apikey').val(stored_apikey);
+    $('#trello_token').val(stored_token);
     $('#boards').val(stored_board);
     $('#lists').val(stored_list);
 

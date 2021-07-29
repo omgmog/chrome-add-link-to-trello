@@ -13,7 +13,7 @@ This is a Chrome extension that will let you add the currently viewed page as a 
   4. Click on `Load Unpacked Extension...`
   5. Select the folder containing the extension
   
-You will need to generate an API key on Trello to use this, you can get one here: [https://trello.com/1/appKey/generate](https://trello.com/1/appKey/generate)
+You will need to generate an API key on Trello to use this, you can get one here: https://trello.com/app-key and since Trello now no-longer supports creating legacy wildcard origins, you will need to manually generate an authorization token from the same page.
 
 
 #### License
