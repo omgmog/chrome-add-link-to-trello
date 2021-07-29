@@ -3,7 +3,7 @@ chrome-add-link-to-trello
 
 This is a Chrome extension that will let you add the currently viewed page as a link on Trello
 
-![](http://cl.ly/PnUY/Screen%20Shot%202013-06-23%20at%2002.41.12.png)
+![](https://i.imgur.com/gsyT1XF.png)
 
 ### To install:
 
@@ -15,6 +15,7 @@ This is a Chrome extension that will let you add the currently viewed page as a 
   
 You will need to generate an API key on Trello to use this, you can get one here: https://trello.com/app-key and since Trello now no-longer supports creating legacy wildcard origins, you will need to manually generate an authorization token from the same page.
 
+![](https://i.imgur.com/Qw1RBQA.png)
 
 #### License
 
