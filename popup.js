@@ -1,15 +1,38 @@
 document.addEventListener('DOMContentLoaded', function () {
-    $('#board').val(localStorage.board||null);
-    $('#list').val(localStorage.list||null);
+    console.log('hello');
+
+    if (localStorage.apikey && localStorage.trello_token) {
+        $('.configured').show();
+        $('.unconfigured').hide();
+
+        $('#board').val(localStorage.board||null);
+        $('#list').val(localStorage.list||null);
+    } else {
+        $('.configured').hide();
+        $('.unconfigured').show();
+    }
+
+    $('.options').on('click', function(e) {
+        e.preventDefault();
+        var optionsUrl = chrome.extension.getURL('options.html');
+
+        chrome.tabs.query({url: optionsUrl}, function(tabs) {
+            if (tabs.length) {
+                chrome.tabs.update(tabs[0].id, {active: true});
+            } else {
+                chrome.tabs.create({url: optionsUrl});
+            }
+        });
+    });
 });
 
 document.addEventListener('Trelloready', function () {
 
     Trello.authorize(options.trello_options);
-    Trello.get('boards/'+localStorage.board, function(board){
+    Trello.get('boards/'+$('#board').val(), function(board){
         $('#boardtext').text(board.name);
     });
-    Trello.get('lists/'+localStorage.list, function(list){
+    Trello.get('lists/'+$('#list').val(), function(list){
         $('#listtext').text(list.name);
     });
 
@@ -27,19 +50,6 @@ document.addEventListener('Trelloready', function () {
 
         Trello.post('cards', data).done(function(){
             window.close();
-        });
-    });
-
-    $('#options').on('click', function(e) {
-        e.preventDefault();
-        var optionsUrl = chrome.extension.getURL('options.html');
-
-        chrome.tabs.query({url: optionsUrl}, function(tabs) {
-            if (tabs.length) {
-                chrome.tabs.update(tabs[0].id, {active: true});
-            } else {
-                chrome.tabs.create({url: optionsUrl});
-            }
         });
     });
 });

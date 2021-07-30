@@ -18,7 +18,6 @@ body.popup {
     margin: 40px auto;
 }
 label {
-    font-weight: bold;
     clear: both;
     display: block;
     font-size: 16px;
@@ -31,11 +30,9 @@ label {
 input, select {
     width: 100%;
     display: block;
-
     background-color: #fff;
     border: 1px solid #d3d3d3;
     border-bottom-color: #bbb;
-    -webkit-box-shadow: 0 1px 3px #D3D3D3;
     box-shadow: 0 1px 3px #D3D3D3;
     color: #393939;
     padding: 8px 10px;
@@ -47,19 +44,17 @@ input, select {
     width: 100%;
     margin-bottom: 10px;
 }
-button {
+.button {
     outline: 0;
     background: #24a828;
-    background: -webkit-linear-gradient(top, #24a828 0%, #1b7e1e 100%);
     background: linear-gradient(to bottom, #24a828 0%, #1b7e1e 100%);
     color: #fff;
     border: none;
     cursor: pointer;
     display: inline-block;
     font-weight: 700;
-    line-height: 20px;
-    margin: 8px 4px 0 0;
-    padding: 7px 20px;
+    margin: 0 4px 0 0;
+    padding: 7px 5px;
     text-align: center;
     border-radius: 3px;
     min-height: 30px;
@@ -67,15 +62,26 @@ button {
     line-height: 18px;
     width: 100%;
     height: 30px;
-    margin-top: 0;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    text-decoration: none;
 }
-button:hover,
-button:active {
+.button:hover,
+.button:active {
     background: #1f9323;
-    background: -webkit-linear-gradient(top, #1f9323 0%, #166919 100%);
     background: linear-gradient(to bottom, #1f9323 0%, #166919 100%);
+}
+
+.secondary {
+    background: #dadada;
+    background: linear-gradient(to bottom, #dadada 0%, #c0c0c0 100%);
+    color: #222;
+}
+.secondary:hover,
+.secondary:active {
+    background: #d0d0d0;
+    background: linear-gradient(to bottom, #d0d0d0 0%, #bababa 100%);
+}
+.actions {
+    display: flex;
 }
 
 ul {

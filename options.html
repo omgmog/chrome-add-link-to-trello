@@ -11,15 +11,17 @@
                 <label for="apikey">
                     API Key (You can generate one <a href="https://trello.com/app-key" target="_blank">here</a>)
                 </label>
-                <input id="apikey" type="text" length=32/>
+                <input id="apikey" type="text"/>
             </li>
             <li>
                 <label for="apikey">
                     Authorization Token
                 </label>
-                <input id="trello_token" type="text" length=64 />
+                <input id="trello_token" type="text" />
             </li>
-            <li class="needsapi">
+            </ul>
+        <ul class="configured" style="display: none;">
+            <li>
                 <label for="boards">
                     Board
                 </label>
@@ -27,7 +29,7 @@
 
                 </select>
             </li>
-            <li class="needsapi">
+            <li>
                 <label for="lists">
                     Lists
                 </label>
@@ -35,12 +37,12 @@
 
                 </select>
             </li>
-            <li>
-                <button id="save">Save</button>
-            </li>
         </ul>
+        <div class="actions">
+            <button class="button secondary" id="clear">Clear options</button>
+            <button class="button" id="save">Save</button>
+        </div>
     </form>
-    <div id="status"></div>
     <div class="footer">
         <p>
             This extension was created by <a href="https://omgmog.net" target="_blank">Max Glenister</a>.

@@ -6,24 +6,34 @@
     </head>
     <body class="popup">
         <form>
-            <label>
-                Title
-            </label>
-            <input id="title" type="text" />
+            <div class="unconfigured" style="display: none;">
 
-            <label>
-                Link
-            </label>
-            <input id="url" type="text" />
+                <p>
+                    It looks like you haven't configured your Trello account yet! 
+                </p>
+                <a href="#" class="options button">Configure</a>
+                
+            </div>
+            <div class="configured" style="display: none;">
+                <label>
+                    Title
+                </label>
+                <input id="title" type="text" />
 
-            <input id="board" type="hidden" />
-            <input id="list" type="hidden" />
+                <label>
+                    Link
+                </label>
+                <input id="url" type="text" />
 
-            <p>
-                This link will be added to the list <em id="listtext"></em> on the <em id="boardtext"></em> board. <a href="#" id="options">Change this?</a>
-            </p>
+                <input id="board" type="hidden" />
+                <input id="list" type="hidden" />
 
-            <button id="submit" tabindex="1">Add to Trello</button>
+                <p>
+                    This link will be added to the list <em id="listtext"></em> on the <em id="boardtext"></em> board. <a href="#" class="options">Configure</a>
+                </p>
+
+                <button class="button" id="submit" tabindex="1">Add to Trello</button>
+            </div>
         </form>
         <script src="jquery-2.0.2.min.js"></script>
         <script src="client.js"></script>
